@@ -1,7 +1,12 @@
 aid: celanese
-url: https://raw.githubusercontent.com/api-evangelist/celanese/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/celanese/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.celanese.com
+description: >-
+  Celanese is a global chemical and specialty materials company that produces high-performance
+  engineered polymers used in a variety of high-value applications, as well as acetyl
+  products and intermediate chemicals.
