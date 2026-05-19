@@ -20,6 +20,8 @@ description: >-
   Cognite Data Fusion based manufacturing data platform for internal operations.
 apis: []
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/celanese
   - type: Website
     url: https://www.celanese.com
   - type: Digital Assistant
