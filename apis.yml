@@ -21,6 +21,8 @@ description: >-
   Cognite Data Fusion based manufacturing data platform for internal operations.
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/celanese-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/celanese
   - type: Website
