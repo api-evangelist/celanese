@@ -1,0 +1,13 @@
+openapi: 3.1.0
+info:
+  title: Celanese API
+  description: >-
+    Celanese Corporation is a global chemical and specialty materials company
+    producing engineered polymers, acetyl products, and other chemical
+    intermediates. No public developer API has been identified. Celanese
+    operates the Chemille digital materials assistant at materials.celanese.com
+    for product search and selection.
+  version: '1.0'
+servers:
+  - url: https://www.celanese.com
+paths: {}

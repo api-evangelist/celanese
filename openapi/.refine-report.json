@@ -1,0 +1,14 @@
+{
+  "provider": "celanese",
+  "sources": [
+    "celanese-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived celanese-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
