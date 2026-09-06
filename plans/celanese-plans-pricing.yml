@@ -1,49 +1,43 @@
 specification: API Commons Plans
 specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+generated: '2026-09-06'
+method: searched
+source: >-
+  Searched the Celanese public web surface (www.celanese.com, materials.celanese.com,
+  askchemille.com) and the open web on 2026-09-06 for an API pricing or plans page.
+  None exists — Celanese publishes no developer API and therefore no API plans, tiers,
+  quotas or prices of any kind.
 provider: Celanese
 providerId: celanese
 created: '2026-05-22'
-modified: '2026-05-22'
+modified: '2026-09-06'
 tags:
-- Chemicals
-- Engineered Polymers
-- Materials
-- Specialty Materials
-description: Machine-readable plans scaffold for the Celanese API surface. Conforms to the API Commons Plans schema. Tier
-  limits and prices are scaffold defaults; replace with provider-published values.
-plans:
-- id: celanese-free
-  name: Free
-  type: freemium
-  description: Free entry tier for the Celanese API surface. Intended for evaluation, prototyping, and low-volume integrations.
-    Real limits and pricing must be reconciled with the provider's published plan documentation.
-  entries:
-  - label: API Requests
-    description: Monthly API request quota across all included endpoints
-    name: api_requests
-    type: quota
-    metric: requests
-    limit: 1000
-    timeFrame: month
-    geo: global
-    domains:
-    - https://celanese.example/api
-    unit: 1
-    price: '0.00'
-    userMultiplied: false
-  - label: Rate Limit
-    description: Maximum requests per minute on the free tier
-    name: rate_limit
-    type: rate
-    metric: requests_per_minute
-    limit: 10
-    timeFrame: minute
-    geo: global
-    domains:
-    - https://celanese.example/api
-    unit: 1
-    price: '0.00'
+  - Chemicals
+  - Engineered Polymers
+  - Materials
+  - Specialty Materials
+description: >-
+  API plans record for Celanese. THERE ARE NO PLANS. Celanese is a chemical and specialty
+  materials manufacturer with no public developer API, no developer portal and no API
+  pricing page, so there is no tier, quota, overage or price to record. This is an honest
+  zero, not an unchecked gap.
+plans: []
+plan_count: 0
 references:
-- name: Celanese API Documentation
-  url: https://raw.githubusercontent.com/api-evangelist/celanese/refs/heads/main/apis.yml
+  - name: Celanese corporate site
+    url: https://www.celanese.com
+    status: 200
+  - name: Chemille digital materials assistant
+    url: https://materials.celanese.com
+    status: 200
+notes:
+  - >-
+    SUPERSEDES A FABRICATED SCAFFOLD. Until 2026-09-06 this file asserted a "celanese-free"
+    freemium tier with a 1,000-request monthly quota and a 10 req/min rate limit, priced at
+    0.00 and attached to the invented domain https://celanese.example/api. Celanese never
+    published any of that. The scaffold was removed under the pipeline's no-fabrication rule
+    and replaced with the measured result.
+  - >-
+    No Plans pointer is wired into apis.yml. A file that records the absence of plans must not
+    be advertised as the provider publishing plans.

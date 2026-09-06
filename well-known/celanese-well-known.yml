@@ -1,0 +1,87 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  Direct HTTP probes of every host this record knows — the registrable domain and www
+  (celanese.com / www.celanese.com), the Chemille digital-assistant host named as a common
+  property (materials.celanese.com), and the Chemille vanity domain named in the USEReady
+  press release (askchemille.com). No OpenAPI servers[] host and no API baseURL exist for
+  this provider, so there is no fourth host to probe.
+description: >-
+  Well-known discovery-document probe for Celanese. NOTHING WAS FOUND. Celanese serves no
+  security.txt, no OpenID/OAuth metadata, no api-catalog, no ai-plugin and no A2A agent card
+  on any host it operates. This file records a measured ABSENCE and deliberately carries no
+  WellKnown or SecurityTxt pointer in apis.yml.
+edge_note: >-
+  www.celanese.com, materials.celanese.com and askchemille.com sit behind an Akamai edge that
+  answers 403 "Access Denied" (errors.edgesuite.net reference) for any path it does not
+  recognise. A control probe of an obviously-nonexistent path
+  (https://www.celanese.com/this-path-does-not-exist-xyz) also returned 403, so on these hosts
+  a 403 is the WAF's catch-all for "no such resource" and is NOT evidence of a gated document.
+  Two paths did reach the origin and returned genuine application 404 pages — /llms.txt and
+  /.well-known/security.txt — which is the strongest available evidence that these documents
+  are simply not published.
+hosts:
+  - host: www.celanese.com
+    note: Corporate site (Sitecore + React SPA). Reached origin on 2 of 6 paths; the rest were WAF-denied.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        file: null
+      - path: /llms.txt
+        status: 404
+        file: null
+  - host: materials.celanese.com
+    note: Chemille digital materials assistant (Next.js). Origin 404 page returned for security.txt and llms.txt.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 403
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+      - path: /.well-known/api-catalog
+        status: 403
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 403
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 403
+        file: null
+      - path: /.well-known/agent.json
+        status: 403
+        file: null
+      - path: /llms.txt
+        status: 404
+        file: null
+  - host: www.askchemille.com
+    note: >-
+      Chemille vanity domain named in the USEReady press release. Every request, including the
+      site root, was answered by the same Akamai 403, so no path on this host reached an origin.
+    documents:
+      - path: /
+        status: 403
+        file: null
+found: 0
+saved_files: []

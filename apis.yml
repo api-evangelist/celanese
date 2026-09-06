@@ -33,7 +33,7 @@ tags:
   - Specialty Materials
   - Fortune 500
 created: '2024-01-15'
-modified: '2026-04-23'
+modified: '2026-09-06'
 specificationVersion: '0.23'
 description: >-
   Celanese Corporation is a global chemical and specialty materials company that
@@ -52,8 +52,36 @@ common:
     url: https://www.celanese.com
   - type: Digital Assistant
     url: https://materials.celanese.com
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/celanese/refs/heads/main/openapi/celanese-openapi.yml
+  - type: LLMsTxt
+    url: llms/celanese-llms.txt
+  - type: GitHubOrganization
+    url: https://github.com/Celanese
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Celanese sells polymers and acetyl chemicals, not software: there is no developer
+    program to find — developer.celanese.com and developers.celanese.com do not resolve,
+    api.celanese.com presents no matching certificate, the real github.com/Celanese
+    organization publishes zero public repositories, seven package registries return zero
+    first-party libraries, and the only digital product (the Chemille material-selection
+    assistant at materials.celanese.com) is a browser app for engineers that ships no API,
+    no llms.txt and no .well-known document.
+  evidence:
+    - url: https://www.celanese.com/llms.txt
+      status: 404
+    - url: https://www.celanese.com/.well-known/security.txt
+      status: 404
+    - url: https://materials.celanese.com/.well-known/security.txt
+      status: 404
+    - url: https://api.github.com/orgs/Celanese/repos
+      status: 200
+  checked: '2026-09-06'

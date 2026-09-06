@@ -1,0 +1,93 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  Unauthenticated registry sweep on 2026-09-06 across npm (registry.npmjs.org search),
+  PyPI (pypi.org/pypi/celanese/json), RubyGems (api/v1/search), crates.io (api/v1/crates),
+  NuGet (azuresearch-usnc.nuget.org/query), Maven Central (search.maven.org/solrsearch),
+  and Packagist (packagist.org/search.json); plus the GitHub organization
+  https://github.com/Celanese and the GitHub user search for "celanese".
+provider: Celanese
+providerId: celanese
+description: >-
+  Client-library sweep for Celanese. NO first-party SDK, client library or published package
+  exists in any public registry. Celanese publishes no developer API, so there is nothing for
+  a client library to wrap. This file records a measured absence, not an unchecked gap — and
+  deliberately carries no SDKs pointer in apis.yml.
+packages: []
+package_count: 0
+registries_checked:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search?text=celanese
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: Registry answered; zero packages matched.
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/celanese/json
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: Registry answered HTTP 404; no project of this name exists.
+  - registry: rubygems
+    endpoint: https://rubygems.org/api/v1/search.json?query=celanese
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: Registry answered with an empty array.
+  - registry: crates.io
+    endpoint: https://crates.io/api/v1/crates?q=celanese
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: Registry answered; meta.total was 0.
+  - registry: nuget
+    endpoint: https://azuresearch-usnc.nuget.org/query?q=celanese
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: Registry answered; totalHits was 0.
+  - registry: maven-central
+    endpoint: https://search.maven.org/solrsearch/select?q=celanese
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: Registry answered; response.numFound was 0.
+  - registry: packagist
+    endpoint: https://packagist.org/search.json?q=celanese
+    query: celanese
+    results: 0
+    version: null
+    published: null
+    note: >-
+      Registry answered with unrelated fuzzy matches (e.g. chrisshick/cakephp3-html-purifier);
+      no package published by or named for Celanese.
+  - registry: cdn
+    endpoint: null
+    query: null
+    results: 0
+    version: null
+    published: null
+    note: >-
+      Checked for a CDN-distributed build (script tag / unpkg / jsDelivr) on the Celanese and
+      Chemille surfaces. None found; nothing is distributed unpinned either.
+source_code_org:
+  url: https://github.com/Celanese
+  status: 200
+  public_repos: 0
+  created_at: '2021-05-26'
+  note: >-
+    The GitHub organization "Celanese" is real and was created 2021-05-26, but it publishes
+    ZERO public repositories, so there is no source-code surface to derive a package from.
+    GitHub user search for "celanese" additionally returned only individual accounts
+    (CelaneseUTZ, CelaneseIT, Celanesenssbx) with no first-party library.
+notes:
+  - No entry here is marked official:true because there is no entry.
+  - A Postman public workspace named "Work_Celanese" exists but is published by an unrelated
+    individual's team ("Dipayan's Team", publisher unverified). It is NOT first-party Celanese
+    and is deliberately not recorded or pointed at.

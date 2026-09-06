@@ -1,55 +1,38 @@
 specification: API Commons Rate Limits
 specificationVersion: '0.1'
 schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+generated: '2026-09-06'
+method: searched
+source: >-
+  Searched the Celanese public web surface (www.celanese.com, materials.celanese.com,
+  askchemille.com) and the open web on 2026-09-06 for published API rate limits, throttling
+  policy or rate-limit response headers. None exists — Celanese publishes no developer API.
 provider: Celanese
 providerId: celanese
 created: '2026-05-22'
-modified: '2026-05-22'
+modified: '2026-09-06'
 tags:
-- Chemicals
-- Engineered Polymers
-- Materials
-- Specialty Materials
-- Rate Limiting
-- Quotas
-- Throttling
-description: Scaffolded rate limit definitions for the Celanese API surface. Captures per-tier quotas, burst behavior, response
-  signaling, and recovery semantics. Defaults are scaffold values to be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
-responseCodes:
-  throttled: 429
-  quotaExceeded: 429
-  serviceUnavailable: 503
-limits:
-- tier: free
-  name: Free Tier Default
-  scope: api-key
-  metric: requests_per_minute
-  limit: 10
-  burst: 20
-  timeFrame: minute
-  applies:
-  - https://celanese.example/api
-  description: Default per-token request rate for the free tier. Bursts above the limit return HTTP 429 with Retry-After.
-- tier: pro
-  name: Pro Tier Default
-  scope: api-key
-  metric: requests_per_minute
-  limit: 120
-  burst: 240
-  timeFrame: minute
-  applies:
-  - https://celanese.example/api
-  description: Higher rate envelope for paid plans; reconcile against published commercial terms.
-recoveryStrategies:
-- name: Exponential Backoff
-  description: Wait Retry-After seconds (or back off exponentially up to 60s) before retrying.
-- name: Queue and Retry
-  description: Submit bulk work in batches under the burst envelope.
+  - Chemicals
+  - Engineered Polymers
+  - Materials
+  - Specialty Materials
+description: >-
+  API rate-limit record for Celanese. THERE ARE NO PUBLISHED LIMITS. Celanese exposes no
+  public API, so there is no per-key or per-account limit, no burst envelope, no
+  X-RateLimit-*/RateLimit-*/Retry-After response header and no documented exhaustion status
+  code to record. This is an honest zero.
+limits: []
+limit_count: 0
+headers: {}
+responseCodes: {}
 notes:
-- Replace scaffold values with the provider's published rate limit policy.
+  - >-
+    SUPERSEDES A FABRICATED SCAFFOLD. Until 2026-09-06 this file asserted a free tier at
+    10 req/min (burst 20) and a pro tier at 120 req/min (burst 240), a full
+    X-RateLimit-Limit / X-RateLimit-Remaining / X-RateLimit-Reset / Retry-After /
+    RateLimit-Policy header set, and 429/503 response codes, all attached to the invented
+    domain https://celanese.example/api. Celanese never published any of it. The scaffold was
+    removed under the pipeline's no-fabrication rule and replaced with the measured result.
+  - >-
+    No RateLimits pointer is wired into apis.yml. A file that records the absence of limits
+    must not be advertised as the provider publishing limits.
