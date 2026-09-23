@@ -1,7 +1,9 @@
 ---
 title: Fourth Quarter 2025 Earnings Prepared Comments
 url: https://www.sec.gov/Archives/edgar/data/1306830/000130683026000017/q420258-kex991a.htm
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Celanese" press release artificial intelligence'
 position: 3
 source: serpapi-google

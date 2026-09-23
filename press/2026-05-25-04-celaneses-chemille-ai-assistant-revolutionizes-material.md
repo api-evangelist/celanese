@@ -1,7 +1,9 @@
 ---
 title: Celanese's Chemille AI Assistant Revolutionizes Material ...
 url: https://www.linkedin.com/posts/useready_materialsscience-enterpriseai-chemicalindustry-activity-7433474582881259520-V9F8
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Celanese" press release artificial intelligence'
 position: 4
 source: serpapi-google
